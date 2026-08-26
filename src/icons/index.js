@@ -1,0 +1,16 @@
+export { default as Logo }  from "./Logo.svg";
+export { default as Seperator }  from "./Seperator.svg";
+export { default as SeperatorTwo }  from "./SeperatorTwo.svg";
+export { default as MenuOpen }  from "./MenuOpen.svg";
+export { default as Home }  from "./Home.svg"
+export { default as HomeHV }  from "./HomeHV.svg"
+export { default as Battles }  from "./Battles.svg"
+export { default as BattlesHV }  from "./BattlesHV.svg"
+export { default as Upgrader }  from "./Upgrader.svg"
+export { default as UpgraderHV }  from "./UpgraderHV.svg"
+export { default as Affiliates }  from "./Affiliates.svg"
+export { default as AffiliatesHV }  from "./AffiliatesHV.svg"
+export { default as Rewards }  from "./Rewards.svg"
+export { default as RewardsHV }  from "./RewardsHV.svg"
+export { default as ArrowDown }  from "./ArrowDown.svg"
+export { default as Player }  from "./Player.svg"

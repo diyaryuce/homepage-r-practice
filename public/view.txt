@@ -401,3 +401,65 @@ height: 18px;
 flex: none;
 order: 0;
 flex-grow: 0;
+---
+/* player */
+
+position: absolute;
+left: 87.55%;
+right: 4.48%;
+top: 23.75%;
+bottom: 23.75%;
+---
+/* Rectangle 6 */
+
+position: absolute;
+left: 80.89%;
+right: 15%;
+top: 23.75%;
+bottom: 23.75%;
+
+background: radial-gradient(50.42% 92.5% at 50.42% 7.5%, #FFDFA7 0%, #E8BD70 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+----
+/* $ 999.00 */
+
+position: absolute;
+left: 75.47%;
+right: 21.35%;
+top: 37.5%;
+bottom: 37.5%;
+
+font-family: 'Onest';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+color: #BFBFBF;
+
+----
+/* Top up */
+
+position: absolute;
+left: 81.72%;
+right: 15.83%;
+top: 37.5%;
+bottom: 37.5%;
+
+font-family: 'Onest';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+color: #212121;
+
+/* chat sidebar */
+
+position: absolute;
+width: 322px;
+height: 1000px;
+left: 0px;
+top: 82px;
+

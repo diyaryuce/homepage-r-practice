@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
 import "@fontsource/onest/400.css";
+import "@fontsource/onest/600.css";
 import "@fontsource/onest/700.css";
 
 import './index.css'
