@@ -21,7 +21,7 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
       "/>
 
       <div className="
-        flex shrink-0 items-center gap-[67.21px]
+        flex shrink-0 items-center gap-3
       ">
         <a href="#" className="cursor-pointer">
           <img src={Logo} alt="logo" className="
@@ -29,7 +29,7 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
           "/>
         </a>
 
-        <button onClick={() => setSidebarOpen(!sidebarOpen)} className="
+        <button onClick={() => setSidebarOpen(!sidebarOpen)} className={`
           flex items-center justify-center
           w-10 h-9
           bg-white/2
@@ -38,7 +38,8 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
           hover:bg-white/8
           hover:border-white/8
           cursor-pointer
-        ">
+
+        `}>
           <span className={`
             relative flex h-6 w-6 items-center justify-center
           `}>
@@ -82,20 +83,26 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
         transition-all
         duration-400
         ease-in-out
-        ${
-          sidebarOpen
-            ? "-h-80 opacity-100"
-            : "opacity-0"
+
+        ${sidebarOpen
+          ? "opacity-100"
+          : "opacity-0"
         }
       `}>
-        <svg className="ml-5.75 shrink-0" width="2" height="80" viewBox="0 0 2 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.03" width="2" height="80" fill="white"/></svg>
+        <svg className="ml-19.5 shrink-0" width="2" height="80" viewBox="0 0 2 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.03" width="2" height="80" fill="white"/></svg>
       </div>
 
       {/*NAVS*/}
-      <nav className="
+      <nav className={`
         flex flex-row items-center 
-        p-0 ml-7.5 h-10 shrink-0
-      ">
+        p-0 ml-8.5 h-10 shrink-0
+
+        transition duration-400
+        ${sidebarOpen
+            ? "translate-x-0"
+            : "-translate-x-12"
+          }
+      `}>
         <a href="#" className="
           flex flex-row justify-center items-center
           py-2.5 px-5 gap-2.75 h-10 group
