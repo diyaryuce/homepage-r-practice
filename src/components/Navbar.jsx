@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Logo, Player } from "../icons"
 
-function Navbar({ sidebarOpen, setSidebarOpen }) {
+function Navbar({ sidebarOpen, setSidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (<>
@@ -38,7 +38,6 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
           hover:bg-white/8
           hover:border-white/8
           cursor-pointer
-
         `}>
           <span className={`
             relative flex h-6 w-6 items-center justify-center
@@ -50,10 +49,9 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
                 duration-200
                 ease-in-out
 
-                ${
-                  sidebarOpen
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-2"
+                ${ sidebarOpen
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-2"
                 }
               `}
                 width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_118_3716)"><path d="M3 18H16V16H3V18Z" fill="white" fill-opacity="0.3"/><path d="M3 13H13V11H3V13Z" fill="white" fill-opacity="0.3"/><path d="M3 6V8H16V6H3Z" fill="white" fill-opacity="0.3"/><path d="M21 15.59L17.42 12L21 8.41L19.59 7L14.59 12L19.59 17L21 15.59Z" fill="white" fill-opacity="0.8"/></g><defs><clipPath id="clip0_118_3716"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>
@@ -64,10 +62,9 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
                 duration-200
                 ease-in-out
 
-                ${
-                  sidebarOpen
-                    ? "opacity-0 -translate-y-2"
-                    : "opacity-100 translate-y-0"
+                ${ sidebarOpen
+                  ? "opacity-0 -translate-y-2"
+                  : "opacity-100 translate-y-0"
                 }
               `}
               
@@ -84,7 +81,7 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
         duration-400
         ease-in-out
 
-        ${sidebarOpen
+        ${ sidebarOpen
           ? "opacity-100"
           : "opacity-0"
         }
@@ -98,10 +95,10 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
         p-0 ml-8.5 h-10 shrink-0
 
         transition duration-400
-        ${sidebarOpen
-            ? "translate-x-0"
-            : "-translate-x-12"
-          }
+        ${ sidebarOpen
+          ? "translate-x-0"
+          : "-translate-x-12"
+        }
       `}>
         <a href="#" className="
           flex flex-row justify-center items-center
@@ -200,6 +197,23 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
             Rewards
           </span>
         </a>
+
+        <button onClick={() => setRainpoolAlertOpen(!rainpoolAlertOpen)} className={`
+          flex justify-center items-center
+          py-2.5 px-5 gap-2.75 h-10 group ml-10
+          
+          transition duration-200
+          hover:bg-white/4
+          cursor-pointer
+        `}>
+
+          <span className="
+            min-w-12 h-4.5 text-white/70
+            font-onest not-italic font-bold text-sm leading-4.5
+          ">
+            Rain Pool Alert
+          </span>
+        </button>
       </nav>
 
       {/*RIGHT SIDE*/}
@@ -216,9 +230,9 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
             </span>
           </div>
 
-          <button className="w-19.75 h-10.5 bg-[radial-gradient(50.42%_92.5%_at_50.42%_7.5%,#FFDFA7_0%,#E8BD70_100%)]">
+          <button className="cursor-pointer w-19.75 h-10.5 bg-[radial-gradient(50.42%_92.5%_at_50.42%_7.5%,#FFDFA7_0%,#E8BD70_100%)]">
             <span className="
-              text-[#212121] cursor-pointer
+              text-[#212121]
               font-onest not-italic font-bold text-sm leading-5
             ">
               Top up
@@ -283,10 +297,9 @@ function MenuDropdown({ dropdownOpen }) {
       transition duration-200
       ease-in-out
 
-      ${
-          dropdownOpen
-            ? "opacity-100 translate-y-0 scale-100"
-            : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+      ${ dropdownOpen
+        ? "opacity-100 translate-y-0 scale-100"
+        : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
       }
     `}>
       <a href="#" className="

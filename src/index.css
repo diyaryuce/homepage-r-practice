@@ -3,3 +3,13 @@
 @theme {
   --font-onest: "Onest", sans-serif;
 }
+
+@keyframes load {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
