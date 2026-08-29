@@ -14,3 +14,5 @@ export { default as Rewards }  from "./Rewards.svg"
 export { default as RewardsHV }  from "./RewardsHV.svg"
 export { default as ArrowDown }  from "./ArrowDown.svg"
 export { default as Player }  from "./Player.svg"
+
+export { default as RoyaleRIcon} from "./roayleicon.svg"

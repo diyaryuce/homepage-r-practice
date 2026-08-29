@@ -462,4 +462,231 @@ width: 322px;
 height: 1000px;
 left: 0px;
 top: 82px;
+---
+/* container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+position: absolute;
+width: 322px;
+height: 926px;
+left: 0px;
+top: 74px;
+---
+/* row */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 322px;
+height: 42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+---
+/* wrapper */
+
+width: 20px;
+height: 42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+---
+/* chat message */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+width: 282px;
+height: 42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+---
+/* content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 2px;
+
+width: 235px;
+height: 42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+--
+/* av */
+
+width: 27px;
+height: 27px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+---
+/* nick */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 6px;
+
+margin: 0 auto;
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+--
+/* title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+
+width: 235px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+----
+/* nick */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 6px;
+
+margin: 0 auto;
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+---
+/* nick */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 6px;
+
+margin: 0 auto;
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+---
+/* rain */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 3.73%;
+right: 3.73%;
+top: 1.2%;
+bottom: 91%;
+
+background: rgba(28, 28, 28, 0.64);
+box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.16);
+backdrop-filter: blur(12px);
+/* Note: backdrop-filter has minimal browser support */
+--
+/* blur */
+
+position: absolute;
+width: 98px;
+height: 98px;
+left: 238px;
+top: -58px;
+
+background: #E8BD70;
+filter: blur(38.1px);
+--
+/* content */
+
+width: 235px;
+height: 22px;
+
+font-family: 'Onest';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 157% */
+
+color: rgba(255, 255, 255, 0.7);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+---
+/* line */
+
+width: 51px;
+height: 1px;
+
+background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+opacity: 0.1;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
 
