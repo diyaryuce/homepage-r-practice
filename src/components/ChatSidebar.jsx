@@ -1,13 +1,10 @@
-import { RoyaleRIcon } from "../icons"
-
 function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
   
   return(<>
       <aside className={`
-        overflow-hidden h-[calc(100vh-80px)] sticky left-0 top-20 bg-[#151515]
-        transition-all pt-4
-        duration-400
-        ease-in-out
+        h-[calc(100vh-80px)] sticky left-0 top-20 pt-4 bg-[#151515]
+        transition-[width,opacity] duration-400 ease-in-out
+        flex flex-col
         ${ sidebarOpen
           ? "w-80.5 opacity-100"
           : "w-0 opacity-0"
@@ -21,6 +18,8 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
 
         <ul className="
           flex flex-col items-start gap-3 relative z-10
+          min-h-0
+          overflow-y-auto overflow-x-hidden sidebar-scroll 
         ">
           <Message
             Name="drizzy"
@@ -41,6 +40,7 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             Icon={<img src="img/royaler.png" />}
             Time="15:36"
             Message="Trust you will win"
+            Level={11}
           />
 
           <Message
@@ -57,11 +57,9 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             Message="i put like £5 on every month"
           />
 
-          <div className="
-            flex flex-col items-center py-2 gap-2.5 w-80.5 h-19.5
-          ">
+          <div className=" flex flex-col items-center py-2 gap-2.5 w-full h-19.5 shrink-0">
             <div className="
-              flex flex-col items-start isolate
+              flex flex-col items-start 
               py-3 px-4 gap-1.5 w-70.5 h-15.5
               bg-white/2
             ">
@@ -69,7 +67,7 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
           </div>
 
           <div className="
-            w-12.75 h-px opacity-10
+            w-12.75 h-px opacity-10 shrink-0
             bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
           "/>
 
@@ -79,7 +77,99 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             Time="15:38"
             Message="Would you rather play a human... Don't trust :)"
           />
+
+          <div className="flex flex-col items-center py-2 gap-2.5 w-full h-19.5 shrink-0">
+            <div className="
+              flex flex-col items-center 
+              py-3 px-4 gap-1.5 w-70.5 h-15.5
+              bg-[#E8BD70]
+            ">
+
+            </div>
+          </div>
+
+          <div className="
+            w-12.75 h-px opacity-10 shrink-0
+            bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
+          "/>
+
+          <div className="w-80.5 h-58.5 shrink-0">
+            <div className="
+              border-3 border-dashed border-white/10
+              flex justify-center mx-auto w-76.5 h-full
+            ">
+              <div className="flex justify-center my-2 mx-2 bg-white/2 w-72.5">
+
+              </div>
+            </div>
+          </div>
+
+          <div className="
+            w-12.75 h-px opacity-10
+            bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
+          "/>
+          <Message
+            Name="OxHearts.com"
+            Icon={<img src="img/0x.png" />}              
+            Time="15:38"
+            Message="Would you rather play a human... Don't trust :)"
+          />
+          <Message
+            Name="OxHearts.com"
+            Icon={<img src="img/0x.png" />}              
+            Time="15:38"
+            Message="Would you rather play a human... Don't trust :)"
+          />
+          <Message
+            Name="OxHearts.com"
+            Icon={<img src="img/0x.png" />}              
+            Time="15:38"
+            Message="Would you rather play a human... Don't trust :)"
+          />
+          <Message
+            Name="OxHearts.com"
+            Icon={<img src="img/0x.png" />}              
+            Time="15:38"
+            Message="Would you rather play a human... Don't trust :)"
+          />
+
         </ul>
+
+        <form className="
+          flex flex-row justify-between items-center
+          w-72.5 min-h-11 pr-3.75 pl-3 gap-2.5 mx-auto mb-4 mt-4
+
+          bg-fixed
+          bg-white/5
+        ">
+          <input type="text" placeholder="Type your message here..." className="
+            flex-1 outline-none
+          text-white/70
+            font-onest not-italic font-semibold text-[14px] leading-4.5
+
+          placeholder:text-white/30
+            placeholder:font-onest 
+            placeholder:not-italic 
+            placeholder:font-bold 
+            placeholder:text-[14px] 
+            placeholder:leading-4.5
+          ">
+
+          </input>
+
+          <div className="
+            flex flex-row items-center 
+            w-13.25 h-5 p-0 gap-3.75 mx-auto
+          ">
+            <button className="cursor-pointer">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1513 8.0999C12.8969 8.0999 13.5013 7.49549 13.5013 6.7499C13.5013 6.00432 12.8969 5.3999 12.1513 5.3999C11.4057 5.3999 10.8013 6.00432 10.8013 6.7499C10.8013 7.49549 11.4057 8.0999 12.1513 8.0999Z" fill="#636363"/><path d="M5.85 8.0999C6.59558 8.0999 7.2 7.49549 7.2 6.7499C7.2 6.00432 6.59558 5.3999 5.85 5.3999C5.10442 5.3999 4.5 6.00432 4.5 6.7499C4.5 7.49549 5.10442 8.0999 5.85 8.0999Z" fill="#636363"/><path d="M9 14.3998C11.052 14.3998 12.798 12.9058 13.5 10.7998H4.5C5.202 12.9058 6.948 14.3998 9 14.3998Z" fill="#636363"/><path d="M8.991 0C4.023 0 0 4.032 0 9C0 13.968 4.023 18 8.991 18C13.968 18 18 13.968 18 9C18 4.032 13.968 0 8.991 0ZM9 16.2C5.022 16.2 1.8 12.978 1.8 9C1.8 5.022 5.022 1.8 9 1.8C12.978 1.8 16.2 5.022 16.2 9C16.2 12.978 12.978 16.2 9 16.2Z" fill="#636363"/></svg>
+            </button>
+
+            <button className="cursor-pointer">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 2.5L5 10L2.5 17.5L18.3333 10L2.5 2.5Z" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10H18.3333" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </form>
       </aside>
   </>)
 }
@@ -87,15 +177,30 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
 export default ChatSidebar
 
 /*---MINI-COMPONENTS---*/
-function Message({Name, Icon, Time, Message}) {
+function Message({Name, Icon, Time, Message, Level}) {
+  const levelColour = getLevelColour(Level);
+  const levelColourText = getLevelColourText(Level);
+
   return(<>
-    <div className="flex w-full min-h-10.5">
+    <div className="flex w-full min-h-10.5 shrink-0">
       <div className="w-5 min-h-10.5"/>
 
       <div className="flex flex-row items-start gap-5 w-70.5">
-        
-        <div className="w-6.75 h-6.75 border-2 border-white/5 rounded-[50px] overflow-hidden shrink-0">
-          {Icon}
+
+        <div className="relative">
+          <div className="w-6.75 h-6.75 border-2 border-white/5 rounded-[50px] overflow-hidden shrink-0">
+            {Icon}
+
+            <div className={`
+              absolute -bottom-1 -right-1
+              px-0.5
+              border border-solid border-[#151515] rounded-[3px]
+              font-onest font-semibold text-[10px]
+              ${levelColour} ${levelColourText}
+            `}>
+              {Level}
+            </div>
+          </div>
         </div>
         
         <div className="grid flex-1">
@@ -105,6 +210,11 @@ function Message({Name, Icon, Time, Message}) {
                 font-onest not-italic font-semibold text-[11px] leading-4.5
               ">
                 {Name}
+                <div className="
+                  flex 
+                ">
+
+                </div>
               </span>
               
             <span className="
@@ -126,7 +236,7 @@ function Message({Name, Icon, Time, Message}) {
     </div>
 
     <div className="
-      w-12.75 h-px opacity-10
+      w-12.75 h-px opacity-10 shrink-0
       bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
     "/>
   </>)
@@ -198,6 +308,7 @@ function RainpoolAlert({ rainpoolAlertOpen, setRainpoolAlertOpen }) {
               Join
             </span>
           </button>
+
         </div>
       </div>
 
@@ -213,3 +324,27 @@ function RainpoolAlert({ rainpoolAlertOpen, setRainpoolAlertOpen }) {
     </div>
   </>)
 }
+
+const LevelColor = {
+  LOW: "bg-blue-500",
+  MID: "bg-red-400",
+  HIGH: "bg-yellow-500",
+};
+
+const LevelColourText = {
+  LOWMID: "text-white",
+  HIGH: "text-black"
+}
+
+function getLevelColour(level) {
+  if (level >= 50) return LevelColor.HIGH;
+  if (level >= 20) return LevelColor.MID;
+
+  return LevelColor.LOW;
+}
+
+function getLevelColourText(level) {
+  if (level >= 50) return LevelColourText.HIGH;
+  return LevelColourText.LOWMID;
+}
+
