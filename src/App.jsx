@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Navbar from "./components/Navbar";
 import ChatSidebar from "./components/ChatSidebar";
+import Main from "./components/Main";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -17,7 +18,7 @@ function App() {
         setRainpoolAlertOpen={setRainpoolAlertOpen}
       />
 
-      <div className="flex">
+      <div className="flex min-h-auto items-stretch">
         <ChatSidebar 
           sidebarOpen={sidebarOpen} 
           
@@ -25,11 +26,8 @@ function App() {
           setRainpoolAlertOpen={setRainpoolAlertOpen}
         />
 
-        <main className="flex-1 min-h-[2000px] bg-[#0f0f0f]">
-          <h1 className="p-8 text-3xl text-white">
-            Main content
-          </h1>
-        </main>
+        <Main />
+        
       </div>
     </div>
   );

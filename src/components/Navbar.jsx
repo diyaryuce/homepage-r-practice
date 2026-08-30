@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { Logo, Player } from "../icons"
 
-function Navbar({ sidebarOpen, setSidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
+function Navbar({ 
+  sidebarOpen, 
+  setSidebarOpen, 
+  rainpoolAlertOpen, 
+  setRainpoolAlertOpen 
+}) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (<>

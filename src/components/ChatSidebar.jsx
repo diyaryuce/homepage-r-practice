@@ -1,8 +1,12 @@
-function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
+function ChatSidebar({ 
+  sidebarOpen, 
+  rainpoolAlertOpen,
+  setRainpoolAlertOpen 
+}) {
   
   return(<>
       <aside className={`
-        h-[calc(100vh-80px)] sticky left-0 top-20 pt-4 bg-[#151515]
+        min-h-full self-stretch sticky left-0 top-20 pt-4 bg-[#151515]
         transition-[width,opacity] duration-400 ease-in-out
         flex flex-col
         ${ sidebarOpen
@@ -26,6 +30,8 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             Icon={<img src="img/fjes.JPG"/>}
             Time="15:09"
             Message="crazyyyyy"
+            Level={69}
+            Role="Designer"
           />
           
           <Message
@@ -33,6 +39,8 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             Icon={<img src="img/java.png"/>}
             Time="15:12"
             Message="I always pull top items on terminal"
+            Level={98}
+            Role="None"
           />
 
           <Message
@@ -41,6 +49,7 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             Time="15:36"
             Message="Trust you will win"
             Level={11}
+            Role="None"
           />
 
           <Message
@@ -48,6 +57,8 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             Icon={<img src="img/stephen.png" />}              
             Time="15:37"
             Message="I always pull top items on terminal"
+            Level={98}
+            Role="None"
           />
 
           <Message
@@ -55,6 +66,8 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             Icon={<img src="img/lolers.png" />}              
             Time="15:38"
             Message="i put like £5 on every month"
+            Level={45}
+            Role="None"
           />
 
           <div className=" flex flex-col items-center py-2 gap-2.5 w-full h-19.5 shrink-0">
@@ -76,6 +89,8 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             Icon={<img src="img/0x.png" />}              
             Time="15:38"
             Message="Would you rather play a human... Don't trust :)"
+            Level={9}
+            Role="Designer"
           />
 
           <div className="flex flex-col items-center py-2 gap-2.5 w-full h-19.5 shrink-0">
@@ -108,31 +123,6 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
             w-12.75 h-px opacity-10
             bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
           "/>
-          <Message
-            Name="OxHearts.com"
-            Icon={<img src="img/0x.png" />}              
-            Time="15:38"
-            Message="Would you rather play a human... Don't trust :)"
-          />
-          <Message
-            Name="OxHearts.com"
-            Icon={<img src="img/0x.png" />}              
-            Time="15:38"
-            Message="Would you rather play a human... Don't trust :)"
-          />
-          <Message
-            Name="OxHearts.com"
-            Icon={<img src="img/0x.png" />}              
-            Time="15:38"
-            Message="Would you rather play a human... Don't trust :)"
-          />
-          <Message
-            Name="OxHearts.com"
-            Icon={<img src="img/0x.png" />}              
-            Time="15:38"
-            Message="Would you rather play a human... Don't trust :)"
-          />
-
         </ul>
 
         <form className="
@@ -177,9 +167,22 @@ function ChatSidebar({ sidebarOpen, rainpoolAlertOpen, setRainpoolAlertOpen }) {
 export default ChatSidebar
 
 /*---MINI-COMPONENTS---*/
-function Message({Name, Icon, Time, Message, Level}) {
-  const levelColour = getLevelColour(Level);
-  const levelColourText = getLevelColourText(Level);
+function Message({Name, Icon, Time, Message, Level, Role}) {
+  const isDesigner = Role === "Designer";
+
+  const levelColour = isDesigner
+    ? "bg-[#B245EF]"
+    : getLevelColour(Level);
+
+  const levelColourText = isDesigner
+    ? "text-white"
+    : getLevelColourText(Level);
+
+  const avatarBorderColour = isDesigner
+    ? "border-[#C254FF]"
+    : "border-white/5";
+
+  const roleColour = getRoleColour(Role);
 
   return(<>
     <div className="flex w-full min-h-10.5 shrink-0">
@@ -188,14 +191,18 @@ function Message({Name, Icon, Time, Message, Level}) {
       <div className="flex flex-row items-start gap-5 w-70.5">
 
         <div className="relative">
-          <div className="w-6.75 h-6.75 border-2 border-white/5 rounded-[50px] overflow-hidden shrink-0">
+          <div className={`
+              w-6.75 h-6.75 border-2 rounded-[50px] 
+              overflow-hidden shrink-0
+              ${avatarBorderColour}            
+            `}>
             {Icon}
 
             <div className={`
               absolute -bottom-1 -right-1
               px-0.5
               border border-solid border-[#151515] rounded-[3px]
-              font-onest font-semibold text-[10px]
+              font-onest font-semibold text-[8px]
               ${levelColour} ${levelColourText}
             `}>
               {Level}
@@ -206,15 +213,21 @@ function Message({Name, Icon, Time, Message, Level}) {
         <div className="grid flex-1">
           <div className="flex w-full">
               <span className="
-                text-white/70
+                text-white/70 flex items-center gap-1.75
                 font-onest not-italic font-semibold text-[11px] leading-4.5
               ">
                 {Name}
-                <div className="
-                  flex 
-                ">
 
-                </div>
+                {Role && Role !== "None" && (<>
+                  <span>
+                    <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="1.5" cy="1.5" r="1.5" fill="white" fill-opacity="0.3"/></svg>
+                  </span>
+                  <span className={`
+                    ${roleColour}
+                  `}>
+                    {Role}
+                  </span>
+                </>)}
               </span>
               
             <span className="
@@ -336,15 +349,27 @@ const LevelColourText = {
   HIGH: "text-black"
 }
 
+const RoleColour = {
+  DESIGNER: "text-[rgba(194,84,255,1)]",
+  SEXY: "text-yellow-500",
+  NONE: "opacity-0 poiner-events-none"
+}
+
 function getLevelColour(level) {
-  if (level >= 50) return LevelColor.HIGH;
+  if (level >= 80) return LevelColor.HIGH;
   if (level >= 20) return LevelColor.MID;
 
   return LevelColor.LOW;
 }
 
 function getLevelColourText(level) {
-  if (level >= 50) return LevelColourText.HIGH;
+  if (level >= 80) return LevelColourText.HIGH;
   return LevelColourText.LOWMID;
+}
+
+function getRoleColour(role) {
+  if (role === "Designer") return RoleColour.DESIGNER;
+  if (role === "Sexy") return RoleColour.SEXY;
+  if (role === "None") return RoleColour.NONE;
 }
 
