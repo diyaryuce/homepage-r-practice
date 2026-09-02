@@ -6,9 +6,9 @@ function ChatSidebar({
   
   return(<>
       <aside className={`
-        min-h-full self-stretch sticky left-0 top-20 pt-4 bg-[#151515]
+        sticky left-0 top-20 pt-4 bg-[#151515]
         transition-[width,opacity] duration-400 ease-in-out
-        flex flex-col
+        flex flex-col h-[calc(100dvh-80px)]
         ${ sidebarOpen
           ? "w-80.5 opacity-100"
           : "w-0 opacity-0"
@@ -22,7 +22,7 @@ function ChatSidebar({
 
         <ul className="
           flex flex-col items-start gap-3 relative z-10
-          min-h-0
+          min-h-0 flex-1
           overflow-y-auto overflow-x-hidden sidebar-scroll 
         ">
           <Message
@@ -32,6 +32,15 @@ function ChatSidebar({
             Message="crazyyyyy"
             Level={69}
             Role="Designer"
+          />
+
+          <Message
+            Name="reactlover"
+            Icon={<img src="img/react.png"/>}
+            Time="15:09"
+            Message="I just LOVE using React! <3"
+            Level={42}
+            Role="None"
           />
           
           <Message
@@ -56,7 +65,7 @@ function ChatSidebar({
             Name="Anonymous"
             Icon={<img src="img/stephen.png" />}              
             Time="15:37"
-            Message="I always pull top items on terminal"
+            Message="Never gambled with any money"
             Level={98}
             Role="None"
           />
@@ -107,16 +116,9 @@ function ChatSidebar({
             w-12.75 h-px opacity-10 shrink-0
             bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
           "/>
-
-          <div className="w-80.5 h-58.5 shrink-0">
-            <div className="
-              border-3 border-dashed border-white/10
-              flex justify-center mx-auto w-76.5 h-full
-            ">
-              <div className="flex justify-center my-2 mx-2 bg-white/2 w-72.5">
-
-              </div>
-            </div>
+          <div className="shrink-0">
+            <svg className="flex justify-center items-center h-full w-full overflow-visible"><rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="12 12" class="rounded-xl text-white/12" rx="12"></rect></svg>
+          
           </div>
 
           <div className="
@@ -126,7 +128,7 @@ function ChatSidebar({
         </ul>
 
         <form className="
-          flex flex-row justify-between items-center
+          flex flex-row justify-between items-center shrink-0
           w-72.5 min-h-11 pr-3.75 pl-3 gap-2.5 mx-auto mb-4 mt-4
 
           bg-fixed
@@ -151,12 +153,18 @@ function ChatSidebar({
             flex flex-row items-center 
             w-13.25 h-5 p-0 gap-3.75 mx-auto
           ">
-            <button className="cursor-pointer">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1513 8.0999C12.8969 8.0999 13.5013 7.49549 13.5013 6.7499C13.5013 6.00432 12.8969 5.3999 12.1513 5.3999C11.4057 5.3999 10.8013 6.00432 10.8013 6.7499C10.8013 7.49549 11.4057 8.0999 12.1513 8.0999Z" fill="#636363"/><path d="M5.85 8.0999C6.59558 8.0999 7.2 7.49549 7.2 6.7499C7.2 6.00432 6.59558 5.3999 5.85 5.3999C5.10442 5.3999 4.5 6.00432 4.5 6.7499C4.5 7.49549 5.10442 8.0999 5.85 8.0999Z" fill="#636363"/><path d="M9 14.3998C11.052 14.3998 12.798 12.9058 13.5 10.7998H4.5C5.202 12.9058 6.948 14.3998 9 14.3998Z" fill="#636363"/><path d="M8.991 0C4.023 0 0 4.032 0 9C0 13.968 4.023 18 8.991 18C13.968 18 18 13.968 18 9C18 4.032 13.968 0 8.991 0ZM9 16.2C5.022 16.2 1.8 12.978 1.8 9C1.8 5.022 5.022 1.8 9 1.8C12.978 1.8 16.2 5.022 16.2 9C16.2 12.978 12.978 16.2 9 16.2Z" fill="#636363"/></svg>
+            <button className="cursor-pointer group">
+              <svg className="
+                transition-all duration-200 ease-in-out 
+                group-hover:scale-[1.2] group-hover:-translate-y-0.5
+              " width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1513 8.0999C12.8969 8.0999 13.5013 7.49549 13.5013 6.7499C13.5013 6.00432 12.8969 5.3999 12.1513 5.3999C11.4057 5.3999 10.8013 6.00432 10.8013 6.7499C10.8013 7.49549 11.4057 8.0999 12.1513 8.0999Z" fill="#636363"/><path d="M5.85 8.0999C6.59558 8.0999 7.2 7.49549 7.2 6.7499C7.2 6.00432 6.59558 5.3999 5.85 5.3999C5.10442 5.3999 4.5 6.00432 4.5 6.7499C4.5 7.49549 5.10442 8.0999 5.85 8.0999Z" fill="#636363"/><path d="M9 14.3998C11.052 14.3998 12.798 12.9058 13.5 10.7998H4.5C5.202 12.9058 6.948 14.3998 9 14.3998Z" fill="#636363"/><path d="M8.991 0C4.023 0 0 4.032 0 9C0 13.968 4.023 18 8.991 18C13.968 18 18 13.968 18 9C18 4.032 13.968 0 8.991 0ZM9 16.2C5.022 16.2 1.8 12.978 1.8 9C1.8 5.022 5.022 1.8 9 1.8C12.978 1.8 16.2 5.022 16.2 9C16.2 12.978 12.978 16.2 9 16.2Z" fill="#636363"/></svg>
             </button>
 
-            <button className="cursor-pointer">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 2.5L5 10L2.5 17.5L18.3333 10L2.5 2.5Z" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10H18.3333" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <button className="cursor-pointer group">
+              <svg className="
+                transition-all duration-200 ease-in-out 
+                group-hover:scale-[1.2] group-hover:-translate-y-0.5
+              " width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 2.5L5 10L2.5 17.5L18.3333 10L2.5 2.5Z" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10H18.3333" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
           </div>
         </form>
@@ -167,7 +175,7 @@ function ChatSidebar({
 export default ChatSidebar
 
 /*---MINI-COMPONENTS---*/
-function Message({Name, Icon, Time, Message, Level, Role}) {
+function Message({ Name, Icon, Time, Message, Level, Role }) {
   const isDesigner = Role === "Designer";
 
   const levelColour = isDesigner

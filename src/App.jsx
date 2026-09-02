@@ -18,7 +18,7 @@ function App() {
         setRainpoolAlertOpen={setRainpoolAlertOpen}
       />
 
-      <div className="flex min-h-auto items-stretch">
+      <div className="flex">
         <ChatSidebar 
           sidebarOpen={sidebarOpen} 
           
@@ -26,7 +26,7 @@ function App() {
           setRainpoolAlertOpen={setRainpoolAlertOpen}
         />
 
-        <Main />
+        <Main sidebarOpen={sidebarOpen}/>
         
       </div>
     </div>

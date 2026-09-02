@@ -91,18 +91,18 @@ function Navbar({
           : "opacity-0"
         }
       `}>
-        <svg className="ml-19.5 shrink-0" width="2" height="80" viewBox="0 0 2 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.03" width="2" height="80" fill="white"/></svg>
+        <svg className="ml-18.75 shrink-0" width="2" height="80" viewBox="0 0 2 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.03" width="2" height="80" fill="white"/></svg>
       </div>
 
       {/*NAVS*/}
       <nav className={`
         flex flex-row items-center 
-        p-0 ml-8.5 h-10 shrink-0
+        p-0 ml-10.5 h-10 shrink-0
 
         transition duration-400
         ${ sidebarOpen
           ? "translate-x-0"
-          : "-translate-x-12"
+          : "-translate-x-14"
         }
       `}>
         <a href="#" className="
@@ -110,7 +110,11 @@ function Navbar({
           py-2.5 px-5 gap-2.75 h-10 group
           bg-white/4
         ">
-          <div className="group relative w-4.5 h-3.5">
+          <div className="
+            group relative w-4.5 h-3.5 
+            transition-all duration-400 ease-in-out 
+            group-hover:scale-[1.25] group-hover:-rotate-3 inline-block 
+          ">
             <svg className="inset-0" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_118_3624)"><path d="M0 0H18V3.23077H0V0Z" fill="#E8BD70"/><path d="M5.625 5.38477H1.125V14.0002H16.875V5.38477H12.375V7.53861H5.625V5.38477Z" fill="#E8BD70"/></g><defs><clipPath id="clip0_118_3624"><rect width="18" height="14" fill="white"/></clipPath></defs></svg>
           </div>
 
@@ -129,7 +133,11 @@ function Navbar({
           transition duration-200
           hover:bg-white/4
         ">
-          <div className="group relative w-5 h-4">
+          <div className="
+            group relative w-5 h-4 
+            transition-all duration-400 ease-in-out 
+            group-hover:scale-[1.25] group-hover:-rotate-3 inline-block 
+          ">
             <svg className="inset-0 group-hover:hidden" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_118_3629)"><path d="M3.78981 0L7.00637 0.59725L14.9045 8.89587L16.4331 7.88998L17.707 9.27308L16.1146 10.8448L18.3439 13.0452L19.3631 12.5422L20 13.611L19.0446 15.057L17.5796 16L16.5605 15.3084L17.0701 14.3026L14.8408 12.1022L13.2484 13.6739L11.8471 12.4165L12.8662 10.9077L10 8.26719L7.13376 10.9077L8.21656 12.4165L6.81529 13.6739L5.22293 12.1022L2.99363 14.3026L3.43949 15.2456L2.42038 15.9371L0.955414 14.9941L0 13.5481L0.700637 12.5422L1.71975 13.0452L3.94904 10.8448L2.35669 9.27308L3.56688 7.95285L5.09554 8.95874L7.70701 6.19253L4.3949 3.17485L3.78981 0ZM16.2102 0L15.6051 3.17485L13.5032 5.12377L11.1465 2.60904L12.9936 0.59725L16.2102 0Z" fill="white" fill-opacity="0.7"/></g><defs><clipPath id="clip0_118_3629"><rect width="20" height="16" fill="white"/></clipPath></defs></svg>
             <svg className="inset-0 hidden group-hover:block" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_66_4080)"><path d="M3.78981 0L7.00637 0.59725L14.9045 8.89587L16.4331 7.88998L17.707 9.27308L16.1146 10.8448L18.3439 13.0452L19.3631 12.5422L20 13.611L19.0446 15.057L17.5796 16L16.5605 15.3084L17.0701 14.3026L14.8408 12.1022L13.2484 13.6739L11.8471 12.4165L12.8662 10.9077L10 8.26719L7.13376 10.9077L8.21656 12.4165L6.81529 13.6739L5.22293 12.1022L2.99363 14.3026L3.43949 15.2456L2.42038 15.9371L0.955414 14.9941L0 13.5481L0.700637 12.5422L1.71975 13.0452L3.94904 10.8448L2.35669 9.27308L3.56688 7.95285L5.09554 8.95874L7.70701 6.19253L4.3949 3.17485L3.78981 0ZM16.2102 0L15.6051 3.17485L13.5032 5.12377L11.1465 2.60904L12.9936 0.59725L16.2102 0Z" fill="#E8BD70"/></g><defs><clipPath id="clip0_66_4080"><rect width="20" height="16" fill="white"/></clipPath></defs></svg>
           </div>
@@ -150,7 +158,11 @@ function Navbar({
           hover:bg-white/4
         ">
           
-          <div className="group relative w-2.5 h-4.25">
+          <div className="
+            group relative w-2.5 h-4.25
+            transition-all duration-400 ease-in-out 
+            group-hover:scale-[1.25] group-hover:-rotate-3 inline-block 
+          ">
             <svg className="inset-0 group-hover:hidden" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 1.7H7V0H3V1.7H1.33C0.6 1.7 0 2.21 0 2.8305V15.861C0 16.49 0.6 17 1.33 17H8.66C9.4 17 10 16.49 10 15.8695V2.8305C10 2.21 9.4 1.7 8.67 1.7ZM4 15.3V10.625H2L6 4.25V8.925H8L4 15.3Z" fill="white" fill-opacity="0.7"/></svg>
             <svg className="inset-0 hidden group-hover:block" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 1.7H7V0H3V1.7H1.33C0.6 1.7 0 2.21 0 2.8305V15.861C0 16.49 0.6 17 1.33 17H8.66C9.4 17 10 16.49 10 15.8695V2.8305C10 2.21 9.4 1.7 8.67 1.7ZM4 15.3V10.625H2L6 4.25V8.925H8L4 15.3Z" fill="#E8BD70"/></svg>
           </div>
@@ -170,7 +182,11 @@ function Navbar({
           transition duration-200
           hover:bg-white/4
         ">
-          <div className="group relative w-4.5 h-3.5">
+          <div className="
+            group relative w-4.5 h-3.5
+            transition-all duration-400 ease-in-out 
+            group-hover:scale-[1.25] group-hover:-rotate-3 inline-block 
+          ">
             <svg className="inset-0 group-hover:hidden" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_118_3640)"><path d="M9 2.91667C9 4.52749 7.7408 5.83333 6.1875 5.83333C4.6342 5.83333 3.375 4.52749 3.375 2.91667C3.375 1.30584 4.6342 0 6.1875 0C7.7408 0 9 1.30584 9 2.91667Z" fill="white" fill-opacity="0.7"/><path d="M2.25 8.1665L0 10.4998V13.9998H9V8.1665H2.25Z" fill="white" fill-opacity="0.7"/><path d="M18 10.4998L15.75 8.1665H11.25V13.9998H18V10.4998Z" fill="white" fill-opacity="0.7"/><path d="M13.5 5.83317C14.7427 5.83317 15.75 4.7885 15.75 3.49984C15.75 2.21117 14.7427 1.1665 13.5 1.1665C12.2573 1.1665 11.25 2.21117 11.25 3.49984C11.25 4.7885 12.2573 5.83317 13.5 5.83317Z" fill="white" fill-opacity="0.7"/></g><defs><clipPath id="clip0_118_3640"><rect width="18" height="14" fill="white"/></clipPath></defs></svg>
             <svg className="inset-0 hidden group-hover:block" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_118_3640)"><path d="M9 2.91667C9 4.52749 7.7408 5.83333 6.1875 5.83333C4.6342 5.83333 3.375 4.52749 3.375 2.91667C3.375 1.30584 4.6342 0 6.1875 0C7.7408 0 9 1.30584 9 2.91667Z" fill="#E8BD70"/><path d="M2.25 8.1665L0 10.4998V13.9998H9V8.1665H2.25Z" fill="#E8BD70"/><path d="M18 10.4998L15.75 8.1665H11.25V13.9998H18V10.4998Z" fill="#E8BD70"/><path d="M13.5 5.83317C14.7427 5.83317 15.75 4.7885 15.75 3.49984C15.75 2.21117 14.7427 1.1665 13.5 1.1665C12.2573 1.1665 11.25 2.21117 11.25 3.49984C11.25 4.7885 12.2573 5.83317 13.5 5.83317Z" fill="#E8BD70"/></g><defs><clipPath id="clip0_118_3640"><rect width="18" height="14" fill="white"/></clipPath></defs></svg>
           </div>
@@ -190,7 +206,11 @@ function Navbar({
           transition duration-200
           hover:bg-white/4
         ">
-          <div className="group relative w-4.5 h-4.25">
+          <div className="
+            group relative w-4.5 h-4.25
+            transition-all duration-400 ease-in-out 
+            group-hover:scale-[1.25] group-hover:-rotate-3 inline-block 
+          ">
             <svg className="inset-0 group-hover:hidden" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_118_3647)"><path d="M3.375 3.4V0H4.5C6.36396 0 7.875 1.52224 7.875 3.4V6.8H0V3.4H3.375Z" fill="white" fill-opacity="0.7"/><path d="M18 3.4H14.625V0H13.5C11.636 0 10.125 1.52224 10.125 3.4V6.8H18V3.4Z" fill="white" fill-opacity="0.7"/><path d="M7.875 9.06689V17.0002H1.125V9.06689H7.875Z" fill="white" fill-opacity="0.7"/><path d="M16.875 17.0002V9.06689H10.125V17.0002H16.875Z" fill="white" fill-opacity="0.7"/></g><defs><clipPath id="clip0_118_3647"><rect width="18" height="17" fill="white"/></clipPath></defs></svg>
             <svg className="inset-0 hidden group-hover:block" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_118_3647)"><path d="M3.375 3.4V0H4.5C6.36396 0 7.875 1.52224 7.875 3.4V6.8H0V3.4H3.375Z" fill="#E8BD70"/><path d="M18 3.4H14.625V0H13.5C11.636 0 10.125 1.52224 10.125 3.4V6.8H18V3.4Z" fill="#E8BD70"/><path d="M7.875 9.06689V17.0002H1.125V9.06689H7.875Z" fill="#E8BD70"/><path d="M16.875 17.0002V9.06689H10.125V17.0002H16.875Z" fill="#E8BD70"/></g><defs><clipPath id="clip0_118_3647"><rect width="18" height="17" fill="white"/></clipPath></defs></svg>
           </div>
@@ -215,6 +235,9 @@ function Navbar({
           <span className="
             min-w-12 h-4.5 text-white/70
             font-onest not-italic font-bold text-sm leading-4.5
+
+            transition-all duration-400 ease-in-out 
+            group-hover:scale-[1.05] inline-block 
           ">
             Rain Pool Alert
           </span>
@@ -235,10 +258,13 @@ function Navbar({
             </span>
           </div>
 
-          <button className="cursor-pointer w-19.75 h-10.5 bg-[radial-gradient(50.42%_92.5%_at_50.42%_7.5%,#FFDFA7_0%,#E8BD70_100%)]">
+          <button className="cursor-pointer group w-19.75 h-10.5 bg-[radial-gradient(50.42%_92.5%_at_50.42%_7.5%,#FFDFA7_0%,#E8BD70_100%)]">
             <span className="
               text-[#212121]
               font-onest not-italic font-bold text-sm leading-5
+              
+              transition-all duration-400 ease-in-out
+              group-hover:scale-[1.1] inline-block
             ">
               Top up
             </span>
@@ -269,7 +295,8 @@ function Navbar({
             </div>
           </div>
         
-          <svg className={`w-5 h-5 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : "rotate-0"}`} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_118_3599)"><path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#BFBFBF"/></g><defs><clipPath id="clip0_118_3599"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>
+          <svg className={`
+            w-5 h-5 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : "rotate-0"}`} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_118_3599)"><path d="M6.175 7.1582L10 10.9749L13.825 7.1582L15 8.3332L10 13.3332L5 8.3332L6.175 7.1582Z" fill="#BFBFBF"/></g><defs><clipPath id="clip0_118_3599"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>
         </button>
 
         <MenuDropdown dropdownOpen={dropdownOpen} />
