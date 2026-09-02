@@ -9,7 +9,7 @@ function App() {
   const [rainpoolAlertOpen, setRainpoolAlertOpen] = useState(false);
 
   return (
-    <div className="min-h-screen min-w-max bg-black">
+    <div className="min-h-screen w-full min-w-0 overflow-x-clip bg-black">
       <Navbar 
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
@@ -18,7 +18,7 @@ function App() {
         setRainpoolAlertOpen={setRainpoolAlertOpen}
       />
 
-      <div className="flex">
+      <div className="flex w-full min-w-0">
         <ChatSidebar 
           sidebarOpen={sidebarOpen} 
           

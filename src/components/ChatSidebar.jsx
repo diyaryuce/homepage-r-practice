@@ -196,7 +196,7 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
     <div className="flex w-full min-h-10.5 shrink-0">
       <div className="w-5 min-h-10.5"/>
 
-      <div className="flex flex-row items-start gap-5 w-70.5">
+      <div className="flex flex-row items-start gap-5 w-70.5 shrink-0">
 
         <div className="relative">
           <div className={`
@@ -247,7 +247,7 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
           </div>
 
             <span className="
-              text-white/70 wrap-break-word
+              text-white/70 wrap-break-word shrink-0
               font-onest not-italic font-semibold text-[12px] leading-5.5
             ">
               {Message}
