@@ -6,7 +6,7 @@ function ChatSidebar({
   
   return(<>
       <aside className={`
-        sticky left-0 top-20 h-[calc(100dvh-80px)]
+        sticky left-0 top-20 h-[calc(100dvh-5rem)]
         shrink-0 overflow-hidden bg-[#151515]
 
         transition-[width] duration-[400ms] ease-in-out
@@ -125,7 +125,7 @@ function ChatSidebar({
               bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
             "/>
             <div className="shrink-0">
-              <svg className="flex justify-center items-center h-full w-full overflow-visible"><rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="12 12" class="rounded-xl text-white/12" rx="12"></rect></svg>
+              <svg className="flex justify-center items-center h-[6rem] w-[12rem] overflow-visible"><rect x="1" y="1" width="calc(100% - 0.125rem)" height="calc(100% - 0.125rem)" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="12 12" class="rounded-xl text-white/12" rx="12"></rect></svg>
             
             </div>
 
@@ -163,16 +163,16 @@ function ChatSidebar({
             ">
               <button className="cursor-pointer group">
                 <svg className="
-                  transition-all duration-200 ease-in-out 
+                  transition-all duration-200 ease-in-out size-[1.125rem]
                   group-hover:scale-[1.2] group-hover:-translate-y-0.5
-                " width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1513 8.0999C12.8969 8.0999 13.5013 7.49549 13.5013 6.7499C13.5013 6.00432 12.8969 5.3999 12.1513 5.3999C11.4057 5.3999 10.8013 6.00432 10.8013 6.7499C10.8013 7.49549 11.4057 8.0999 12.1513 8.0999Z" fill="#636363"/><path d="M5.85 8.0999C6.59558 8.0999 7.2 7.49549 7.2 6.7499C7.2 6.00432 6.59558 5.3999 5.85 5.3999C5.10442 5.3999 4.5 6.00432 4.5 6.7499C4.5 7.49549 5.10442 8.0999 5.85 8.0999Z" fill="#636363"/><path d="M9 14.3998C11.052 14.3998 12.798 12.9058 13.5 10.7998H4.5C5.202 12.9058 6.948 14.3998 9 14.3998Z" fill="#636363"/><path d="M8.991 0C4.023 0 0 4.032 0 9C0 13.968 4.023 18 8.991 18C13.968 18 18 13.968 18 9C18 4.032 13.968 0 8.991 0ZM9 16.2C5.022 16.2 1.8 12.978 1.8 9C1.8 5.022 5.022 1.8 9 1.8C12.978 1.8 16.2 5.022 16.2 9C16.2 12.978 12.978 16.2 9 16.2Z" fill="#636363"/></svg>
+                " viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1513 8.0999C12.8969 8.0999 13.5013 7.49549 13.5013 6.7499C13.5013 6.00432 12.8969 5.3999 12.1513 5.3999C11.4057 5.3999 10.8013 6.00432 10.8013 6.7499C10.8013 7.49549 11.4057 8.0999 12.1513 8.0999Z" fill="#636363"/><path d="M5.85 8.0999C6.59558 8.0999 7.2 7.49549 7.2 6.7499C7.2 6.00432 6.59558 5.3999 5.85 5.3999C5.10442 5.3999 4.5 6.00432 4.5 6.7499C4.5 7.49549 5.10442 8.0999 5.85 8.0999Z" fill="#636363"/><path d="M9 14.3998C11.052 14.3998 12.798 12.9058 13.5 10.7998H4.5C5.202 12.9058 6.948 14.3998 9 14.3998Z" fill="#636363"/><path d="M8.991 0C4.023 0 0 4.032 0 9C0 13.968 4.023 18 8.991 18C13.968 18 18 13.968 18 9C18 4.032 13.968 0 8.991 0ZM9 16.2C5.022 16.2 1.8 12.978 1.8 9C1.8 5.022 5.022 1.8 9 1.8C12.978 1.8 16.2 5.022 16.2 9C16.2 12.978 12.978 16.2 9 16.2Z" fill="#636363"/></svg>
               </button>
 
               <button className="cursor-pointer group">
                 <svg className="
-                  transition-all duration-200 ease-in-out 
+                  transition-all duration-200 ease-in-out size-[1.25rem]
                   group-hover:scale-[1.2] group-hover:-translate-y-0.5
-                " width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 2.5L5 10L2.5 17.5L18.3333 10L2.5 2.5Z" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10H18.3333" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 2.5L5 10L2.5 17.5L18.3333 10L2.5 2.5Z" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10H18.3333" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </div>
           </form>
@@ -209,7 +209,7 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
 
         <div className="relative">
           <div className={`
-              w-6.75 h-6.75 border-2 rounded-[3.125rem] 
+              w-6.75 h-6.75 border-[0.125rem] rounded-[3.125rem] 
               overflow-hidden shrink-0
               ${avatarBorderColour}            
             `}>
@@ -218,7 +218,7 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
             <div className={`
               absolute -bottom-1 -right-1
               px-0.5
-              border border-solid border-[#151515] rounded-[0.25rem]
+              border-[0.0625rem] border-solid border-[#151515] rounded-[0.25rem]
               font-onest font-semibold text-[0.55rem]
               ${levelColour} ${levelColourText}
             `}>
@@ -266,7 +266,7 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
     </div>
 
     <div className="
-      w-12.75 h-px opacity-10 shrink-0
+      w-12.75 h-0.25 opacity-10 shrink-0
       bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
     "/>
   </>)
