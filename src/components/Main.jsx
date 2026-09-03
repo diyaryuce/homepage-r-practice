@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 function Main({ sidebarOpen }) {
   return(<>
     <main className="
@@ -83,7 +85,7 @@ function Main({ sidebarOpen }) {
 
       <div role="gamemodes" className="
         flex flex-col items-start 
-        w-full gap-6 mt-10
+        gap-6 mt-10
       ">
         <div className="
           flex flex-col items-start gap-2 w-114
@@ -154,12 +156,12 @@ export default Main;
 function Gamemodes({ Image, Name }) {
   return (<>
     <a href="#" className={`
-      relative flex h-65 bg-[#151515] group
+      relative flex w-full h-65 bg-[#151515] group
 
       transition-all duration-400 ease-in-out
-      w-full min-w-0 overflow-hidden
+      min-w-0 overflow-hidden
     `}>
-      <img src="/img/rays.png" alt="rays" className="absolute inset-0 h-full w-full object-cover" />
+      <img src="/img/rays.png" alt="rays" className="absolute" />
 
       <div className="
         relative flex justify-center
@@ -176,7 +178,7 @@ function Gamemodes({ Image, Name }) {
       <div className="absolute top-40.75 w-full h-px bg-[#282828]" />
 
       <div className="
-        flex flex-col mt-auto absolute top-45 mx-4 mb-4 gap-1
+        absolute inset-x-4 top-45 flex flex-col gap-1
       ">
         <span className="text-white font-onest not-italic font-bold text-[18px] leading-6">
           {Name}
@@ -193,7 +195,7 @@ function Gamemodes({ Image, Name }) {
 function Battles() {
   return(<>
     <div className="
-      flex  w-full h-[114px] bg-[#151515] mt-4
+      flex w-full h-[114px] bg-[#151515] mt-4
       grid-cols-[repeat(auto-fit,minmax(280px,1fr))]
       overflow-hidden relative
     ">
@@ -216,48 +218,54 @@ function Battles() {
 
       <div className="h-[114px] w-px opacity-10 bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)] absolute left-[128px]" />
 
-      <div className="my-auto flex gap-[10px]">
-        <button className="cursor-pointer">
-          <svg className="ml-[10px] my-auto" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8416 13.825L9.02489 10L12.8416 6.175L11.6666 5L6.66655 10L11.6666 15L12.8416 13.825Z" fill="#3c3c3c"/></svg>
-        </button>
-
-        <Cases 
-          Colour="Blue"
-          Box={<img src="/img/watchbox.png" />}
-        />
-
-        <Cases 
-          Colour="Purple"
-          Box={<img src="/img/applebox.png" />}
-        />
-
-        <Cases 
-          Colour="Red"
-          Box={<img src="/img/yeezybox.png" />}
-        />
-
-        <Cases 
-          Colour="Blue"
-          Box={<img src="/img/watchbox.png" />}
-        />
-
-        <Cases 
-          Colour="Purple"
-          Box={<img src="/img/applebox.png" />}
-        />
-
-        <Cases 
-          Colour="Red"
-          Box={<img src="/img/yeezybox.png" />}
-        />
-        
-        <Cases 
-          Colour="Gold"
-          Box={<img src="/img/lvbox.png" />}
-        />
-
-      </div>
+      <CaseCarousel />
       
+    </div>
+  </>)
+}
+
+function CaseCarousel() {
+  const sliderRef = useRef(null);
+
+  const scrollSlider = (direction) => {
+    const slider = sliderRef.current;
+    const firstBox = slider.firstElementChild;
+
+    if (!firstBox) return;
+
+    const boxWidth = firstBox.getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(slider).columnGap) || 0;
+
+    slider.scrollBy({
+      left: direction * (boxWidth + gap),
+      behavior: "smooth"
+    });
+  };
+
+  return(<>
+    <div className="relative my-auto flex gap-[10px]">
+      <button type="button" aria-label="Previous box" onClick={() => scrollSlider(-1)} className="
+        cursor-pointer w-[20px] h-[20px] my-auto shrink-0 ml-[10px]
+      ">
+        <div className="group transition-all duration-400 ease-in-out">
+          <svg className="inset-0 group-hover:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8416 13.825L9.02489 10L12.8416 6.175L11.6666 5L6.66655 10L11.6666 15L12.8416 13.825Z" fill="#3c3c3c"/></svg>
+          <svg className="inset-0 hidden group-hover:block group-hover:scale-[1.5]" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8416 13.825L9.02489 10L12.8416 6.175L11.6666 5L6.66655 10L11.6666 15L12.8416 13.825Z" fill="#ffffff"/></svg>
+        </div>
+      </button>
+
+      <Cases Colour="Blue" Box={<img src="/img/watchbox.png" />} />
+
+      <Cases Colour="Purple" Box={<img src="/img/applebox.png" />} />
+
+      <Cases Colour="Red" Box={<img src="/img/yeezybox.png" />} />
+
+      <Cases Colour="Blue" Box={<img src="/img/watchbox.png" />} />
+
+      <Cases Colour="Purple" Box={<img src="/img/applebox.png" />} />
+
+      <Cases Colour="Red" Box={<img src="/img/yeezybox.png" />} />
+
+      <Cases Colour="Gold" Box={<img src="/img/lvbox.png" />} />
     </div>
   </>)
 }

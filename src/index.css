@@ -14,7 +14,15 @@
   }
 }
 
+html {
+  font-size: 100%;
+}
 
+@media (max-width: 1800px) {
+  html {
+    font-size: 90%;
+  }
+}
 
 .sidebar-scroll {
   overflow-y: auto;

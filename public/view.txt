@@ -1059,4 +1059,147 @@ top: 33px;
 background: #E8BD70;
 opacity: 0.24;
 filter: blur(48px);
+---
+/* Frame 1410103878 */
+
+position: absolute;
+width: 576px;
+height: 28px;
+left: 512px;
+top: 40px;
+---
+/* slider */
+
+position: absolute;
+width: 576px;
+height: 2px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+background-blend-mode: soft-light;
+backdrop-filter: blur(4px);
+/* Note: backdrop-filter has minimal browser support */
+----
+/* You have 28,321 points */
+
+position: absolute;
+width: 204px;
+height: 24px;
+left: 74px;
+top: 42px;
+
+font-family: 'Onest';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+text-align: center;
+
+---
+font-family: Onest;
+font-weight: 700;
+font-style: Bold;
+font-size: 12px;
+leading-trim: NONE;
+line-height: 18px;
+letter-spacing: 24%;
+text-align: center;
+---
+/* row */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+width: 456px;
+height: 76px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+---
+/* user-section */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 1512px;
+height: 96px;
+left: 43px;
+top: 38px;
+
+border: 1px solid rgba(255, 255, 255, 0.4);
+---
+/* gamemodes */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+position: absolute;
+width: 1512px;
+height: 360px;
+left: 43px;
+top: 174px;
+---
+/* item */
+
+width: 360px;
+height: 260px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+---
+/* slider */
+
+position: absolute;
+width: 360px;
+height: 1px;
+left: 0px;
+top: 163px;
+
+background: #FFFFFF;
+background-blend-mode: soft-light;
+backdrop-filter: blur(4px);
+/* Note: backdrop-filter has minimal browser support */
+transform: matrix(1, 0, 0, -1, 0, 0);
+---
+background: radial-gradient(50.42% 92.5% at 50.42% 7.5%, #FFDFA7 0%, #E8BD70 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+---
+/* row */
+
+position: absolute;
+width: 1349px;
+height: 18px;
+left: 0px;
+top: 100px;
+---
+backdrop-filter: blur(96px)
+--
+background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+---
+/* blur */
+
+position: absolute;
+left: 25.44%;
+right: 25.44%;
+top: 100.88%;
+bottom: -50%;
+
+background: #2E8DC8;
+mix-blend-mode: normal;
+filter: blur(48px);
 

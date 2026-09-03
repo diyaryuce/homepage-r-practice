@@ -6,168 +6,177 @@ function ChatSidebar({
   
   return(<>
       <aside className={`
-        sticky left-0 top-20 pt-4 bg-[#151515]
-        transition-[width,opacity] duration-400 ease-in-out
-        flex flex-col h-[calc(100dvh-80px)]
-        ${ sidebarOpen
-          ? "w-80.5 opacity-100"
-          : "w-0 opacity-0"
-        }
+        sticky left-0 top-20 h-[calc(100dvh-80px)]
+        shrink-0 overflow-hidden bg-[#151515]
+
+        transition-[width] duration-[400ms] ease-in-out
+        ${sidebarOpen ? "w-80.5" : "w-0"}
       `}>
 
-        <RainpoolAlert 
-          rainpoolAlertOpen={rainpoolAlertOpen} 
-          setRainpoolAlertOpen={setRainpoolAlertOpen}
-        />
+        <div className={`
+          flex h-full w-80.5 shrink-0 flex-col pt-4
 
-        <ul className="
-          flex flex-col items-start gap-3 relative z-10
-          min-h-0 flex-1
-          overflow-y-auto overflow-x-hidden sidebar-scroll 
-        ">
-          <Message
-            Name="drizzy"
-            Icon={<img src="img/fjes.JPG"/>}
-            Time="15:09"
-            Message="crazyyyyy"
-            Level={69}
-            Role="Designer"
+          transition-transform duration-[400ms] ease-in-out
+          ${sidebarOpen
+            ? "translate-x-0"
+            : "-translate-x-full pointer-events-none"
+          }
+        `}>
+
+          <RainpoolAlert 
+            rainpoolAlertOpen={rainpoolAlertOpen} 
+            setRainpoolAlertOpen={setRainpoolAlertOpen}
           />
 
-          <Message
-            Name="reactlover"
-            Icon={<img src="img/react.png"/>}
-            Time="15:09"
-            Message="I just LOVE using React! <3"
-            Level={42}
-            Role="None"
-          />
-          
-          <Message
-            Name="boberman"
-            Icon={<img src="img/java.png"/>}
-            Time="15:12"
-            Message="I always pull top items on terminal"
-            Level={98}
-            Role="None"
-          />
-
-          <Message
-            Name="RoyaleR"
-            Icon={<img src="img/royaler.png" />}
-            Time="15:36"
-            Message="Trust you will win"
-            Level={11}
-            Role="None"
-          />
-
-          <Message
-            Name="Anonymous"
-            Icon={<img src="img/stephen.png" />}              
-            Time="15:37"
-            Message="Never gambled with any money"
-            Level={98}
-            Role="None"
-          />
-
-          <Message
-            Name="Stephanos"
-            Icon={<img src="img/lolers.png" />}              
-            Time="15:38"
-            Message="i put like £5 on every month"
-            Level={45}
-            Role="None"
-          />
-
-          <div className=" flex flex-col items-center py-2 gap-2.5 w-full h-19.5 shrink-0">
-            <div className="
-              flex flex-col items-start 
-              py-3 px-4 gap-1.5 w-70.5 h-15.5
-              bg-white/2
-            ">
-            </div>
-          </div>
-
-          <div className="
-            w-12.75 h-px opacity-10 shrink-0
-            bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
-          "/>
-
-          <Message
-            Name="OxHearts.com"
-            Icon={<img src="img/0x.png" />}              
-            Time="15:38"
-            Message="Would you rather play a human... Don't trust :)"
-            Level={9}
-            Role="Designer"
-          />
-
-          <div className="flex flex-col items-center py-2 gap-2.5 w-full h-19.5 shrink-0">
-            <div className="
-              flex flex-col items-center 
-              py-3 px-4 gap-1.5 w-70.5 h-15.5
-              bg-[#E8BD70]
-            ">
-
-            </div>
-          </div>
-
-          <div className="
-            w-12.75 h-px opacity-10 shrink-0
-            bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
-          "/>
-          <div className="shrink-0">
-            <svg className="flex justify-center items-center h-full w-full overflow-visible"><rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="12 12" class="rounded-xl text-white/12" rx="12"></rect></svg>
-          
-          </div>
-
-          <div className="
-            w-12.75 h-px opacity-10
-            bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
-          "/>
-        </ul>
-
-        <form className="
-          flex flex-row justify-between items-center shrink-0
-          w-72.5 min-h-11 pr-3.75 pl-3 gap-2.5 mx-auto mb-4 mt-4
-
-          bg-fixed
-          bg-white/5
-        ">
-          <input type="text" placeholder="Type your message here..." className="
-            flex-1 outline-none
-          text-white/70
-            font-onest not-italic font-semibold text-[14px] leading-4.5
-
-          placeholder:text-white/30
-            placeholder:font-onest 
-            placeholder:not-italic 
-            placeholder:font-bold 
-            placeholder:text-[14px] 
-            placeholder:leading-4.5
+          <ul className="
+            flex flex-col items-start gap-3 relative z-10
+            min-h-0 flex-1
+            overflow-y-auto overflow-x-hidden sidebar-scroll 
           ">
+            <Message
+              Name="drizzy"
+              Icon={<img src="img/fjes.JPG"/>}
+              Time="15:09"
+              Message="crazyyyyy"
+              Level={69}
+              Role="Designer"
+            />
 
-          </input>
+            <Message
+              Name="reactlover"
+              Icon={<img src="img/react.png"/>}
+              Time="15:09"
+              Message="I just LOVE using React! <3"
+              Level={42}
+              Role="None"
+            />
+            
+            <Message
+              Name="boberman"
+              Icon={<img src="img/java.png"/>}
+              Time="15:12"
+              Message="I always pull top items on terminal"
+              Level={98}
+              Role="None"
+            />
 
-          <div className="
-            flex flex-row items-center 
-            w-13.25 h-5 p-0 gap-3.75 mx-auto
+            <Message
+              Name="RoyaleR"
+              Icon={<img src="img/royaler.png" />}
+              Time="15:36"
+              Message="Trust you will win"
+              Level={11}
+              Role="None"
+            />
+
+            <Message
+              Name="Anonymous"
+              Icon={<img src="img/stephen.png" />}              
+              Time="15:37"
+              Message="Never gambled with any money"
+              Level={98}
+              Role="None"
+            />
+
+            <Message
+              Name="Stephanos"
+              Icon={<img src="img/lolers.png" />}              
+              Time="15:38"
+              Message="i put like £5 on every month"
+              Level={45}
+              Role="None"
+            />
+
+            <div className=" flex flex-col items-center py-2 gap-2.5 w-full h-19.5 shrink-0">
+              <div className="
+                flex flex-col items-start 
+                py-3 px-4 gap-1.5 w-70.5 h-15.5
+                bg-white/2
+              ">
+              </div>
+            </div>
+
+            <div className="
+              w-12.75 h-px opacity-10 shrink-0
+              bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
+            "/>
+
+            <Message
+              Name="OxHearts.com"
+              Icon={<img src="img/0x.png" />}              
+              Time="15:38"
+              Message="Would you rather play a human... Don't trust :)"
+              Level={9}
+              Role="Designer"
+            />
+
+            <div className="flex flex-col items-center py-2 gap-2.5 w-full h-19.5 shrink-0">
+              <div className="
+                flex flex-col items-center 
+                py-3 px-4 gap-1.5 w-70.5 h-15.5
+                bg-[#E8BD70]
+              ">
+
+              </div>
+            </div>
+
+            <div className="
+              w-12.75 h-px opacity-10 shrink-0
+              bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
+            "/>
+            <div className="shrink-0">
+              <svg className="flex justify-center items-center h-full w-full overflow-visible"><rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="12 12" class="rounded-xl text-white/12" rx="12"></rect></svg>
+            
+            </div>
+
+            <div className="
+              w-12.75 h-px opacity-10
+              bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0)_100%)]
+            "/>
+          </ul>
+
+          <form className="
+            flex flex-row justify-between items-center shrink-0
+            w-72.5 min-h-11 pr-3.75 pl-3 gap-2.5 mx-auto mb-4 mt-4
+
+            bg-fixed
+            bg-white/5
           ">
-            <button className="cursor-pointer group">
-              <svg className="
-                transition-all duration-200 ease-in-out 
-                group-hover:scale-[1.2] group-hover:-translate-y-0.5
-              " width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1513 8.0999C12.8969 8.0999 13.5013 7.49549 13.5013 6.7499C13.5013 6.00432 12.8969 5.3999 12.1513 5.3999C11.4057 5.3999 10.8013 6.00432 10.8013 6.7499C10.8013 7.49549 11.4057 8.0999 12.1513 8.0999Z" fill="#636363"/><path d="M5.85 8.0999C6.59558 8.0999 7.2 7.49549 7.2 6.7499C7.2 6.00432 6.59558 5.3999 5.85 5.3999C5.10442 5.3999 4.5 6.00432 4.5 6.7499C4.5 7.49549 5.10442 8.0999 5.85 8.0999Z" fill="#636363"/><path d="M9 14.3998C11.052 14.3998 12.798 12.9058 13.5 10.7998H4.5C5.202 12.9058 6.948 14.3998 9 14.3998Z" fill="#636363"/><path d="M8.991 0C4.023 0 0 4.032 0 9C0 13.968 4.023 18 8.991 18C13.968 18 18 13.968 18 9C18 4.032 13.968 0 8.991 0ZM9 16.2C5.022 16.2 1.8 12.978 1.8 9C1.8 5.022 5.022 1.8 9 1.8C12.978 1.8 16.2 5.022 16.2 9C16.2 12.978 12.978 16.2 9 16.2Z" fill="#636363"/></svg>
-            </button>
+            <input type="text" placeholder="Type your message here..." className="
+              flex-1 outline-none
+            text-white/70
+              font-onest not-italic font-semibold text-[0.875rem] leading-4.5
 
-            <button className="cursor-pointer group">
-              <svg className="
-                transition-all duration-200 ease-in-out 
-                group-hover:scale-[1.2] group-hover:-translate-y-0.5
-              " width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 2.5L5 10L2.5 17.5L18.3333 10L2.5 2.5Z" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10H18.3333" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-        </form>
+            placeholder:text-white/30
+              placeholder:font-onest 
+              placeholder:not-italic 
+              placeholder:font-bold 
+              placeholder:text-[0.875rem] 
+              placeholder:leading-4.5
+            ">
+
+            </input>
+
+            <div className="
+              flex flex-row items-center 
+              w-13.25 h-5 p-0 gap-3.75 mx-auto
+            ">
+              <button className="cursor-pointer group">
+                <svg className="
+                  transition-all duration-200 ease-in-out 
+                  group-hover:scale-[1.2] group-hover:-translate-y-0.5
+                " width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1513 8.0999C12.8969 8.0999 13.5013 7.49549 13.5013 6.7499C13.5013 6.00432 12.8969 5.3999 12.1513 5.3999C11.4057 5.3999 10.8013 6.00432 10.8013 6.7499C10.8013 7.49549 11.4057 8.0999 12.1513 8.0999Z" fill="#636363"/><path d="M5.85 8.0999C6.59558 8.0999 7.2 7.49549 7.2 6.7499C7.2 6.00432 6.59558 5.3999 5.85 5.3999C5.10442 5.3999 4.5 6.00432 4.5 6.7499C4.5 7.49549 5.10442 8.0999 5.85 8.0999Z" fill="#636363"/><path d="M9 14.3998C11.052 14.3998 12.798 12.9058 13.5 10.7998H4.5C5.202 12.9058 6.948 14.3998 9 14.3998Z" fill="#636363"/><path d="M8.991 0C4.023 0 0 4.032 0 9C0 13.968 4.023 18 8.991 18C13.968 18 18 13.968 18 9C18 4.032 13.968 0 8.991 0ZM9 16.2C5.022 16.2 1.8 12.978 1.8 9C1.8 5.022 5.022 1.8 9 1.8C12.978 1.8 16.2 5.022 16.2 9C16.2 12.978 12.978 16.2 9 16.2Z" fill="#636363"/></svg>
+              </button>
+
+              <button className="cursor-pointer group">
+                <svg className="
+                  transition-all duration-200 ease-in-out 
+                  group-hover:scale-[1.2] group-hover:-translate-y-0.5
+                " width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 2.5L5 10L2.5 17.5L18.3333 10L2.5 2.5Z" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10H18.3333" stroke="#636363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </aside>
   </>)
 }
@@ -200,7 +209,7 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
 
         <div className="relative">
           <div className={`
-              w-6.75 h-6.75 border-2 rounded-[50px] 
+              w-6.75 h-6.75 border-2 rounded-[3.125rem] 
               overflow-hidden shrink-0
               ${avatarBorderColour}            
             `}>
@@ -209,8 +218,8 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
             <div className={`
               absolute -bottom-1 -right-1
               px-0.5
-              border border-solid border-[#151515] rounded-[3px]
-              font-onest font-semibold text-[8px]
+              border border-solid border-[#151515] rounded-[0.25rem]
+              font-onest font-semibold text-[0.55rem]
               ${levelColour} ${levelColourText}
             `}>
               {Level}
@@ -222,7 +231,7 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
           <div className="flex w-full">
               <span className="
                 text-white/70 flex items-center gap-1.75
-                font-onest not-italic font-semibold text-[11px] leading-4.5
+                font-onest not-italic font-semibold text-[0.75rem] leading-4.5
               ">
                 {Name}
 
@@ -240,7 +249,7 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
               
             <span className="
             text-white/30 ml-auto
-              font-onest not-italic font-semibold text-[11px] leading-4.5
+              font-onest not-italic font-semibold text-[0.6875rem] leading-4.5
             ">
               {Time}
             </span>
@@ -248,7 +257,7 @@ function Message({ Name, Icon, Time, Message, Level, Role }) {
 
             <span className="
               text-white/70 wrap-break-word shrink-0
-              font-onest not-italic font-semibold text-[12px] leading-5.5
+              font-onest not-italic font-semibold text-[0.75rem] leading-5.5
             ">
               {Message}
             </span>
@@ -284,7 +293,7 @@ function RainpoolAlert({ rainpoolAlertOpen, setRainpoolAlertOpen }) {
 
       <div className="
         absolute w-24.5 h-24.5 left-59.5 -top-14.5
-        bg-[#E8BD70] blur-[38.1px] -z-20
+        bg-[#E8BD70] blur-[2.38125rem] -z-20
       "/>
 
       <div className="mx-4 flex items-center z-20 h-full">
@@ -293,14 +302,14 @@ function RainpoolAlert({ rainpoolAlertOpen, setRainpoolAlertOpen }) {
         <div className="grid ml-3 gap-0.75">
           <span className="
             text-white
-            font-onest not-italic font-bold text-[18px] leading-6
+            font-onest not-italic font-bold text-[1.125rem] leading-6
           ">
             1,044.95
           </span>
 
           <span className="
             text-white/40
-            font-onest not-italic font-bold text-[14px] leading-4.5
+            font-onest not-italic font-bold text-[0.875rem] leading-4.5
           ">
             Rain Pool
           </span>
@@ -324,7 +333,7 @@ function RainpoolAlert({ rainpoolAlertOpen, setRainpoolAlertOpen }) {
           `}>
             <span className="
               text-[rgba(33,33,33,1)]
-              font-onest not-italic font-bold text-[14px] leading-5
+              font-onest not-italic font-bold text-[0.875rem] leading-5
             ">
               Join
             </span>
